@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--WIDTH HEIGHT-->
+	<dimen name="dialogWidth">200dp</dimen>
+	<dimen name="button_height">45dp</dimen>
+	<dimen name="loading_view_size">50dp</dimen>
+</resources>

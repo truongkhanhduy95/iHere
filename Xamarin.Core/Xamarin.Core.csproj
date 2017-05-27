@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22129D1A-E915-4F40-A189-9C0161914DAB}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Xamarin.Core</RootNamespace>
+    <AssemblyName>Xamarin.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IDialogServiceEx.cs" />
+    <Compile Include="Interfaces\Service\IServiceErrorHandler.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\Navigator\INavigator.cs" />
+    <Compile Include="Service\BaseResponseObject.cs" />
+    <Compile Include="Service\BaseServiceClient.cs" />
+    <Compile Include="Service\INetworkDetector.cs" />
+    <Compile Include="Service\ServiceResponseEventArgs.cs" />
+    <Compile Include="ShareBusiness\BaseShareBusiness.cs" />
+    <Compile Include="Storage\AppStorage\IAppStorage.cs" />
+    <Compile Include="Storage\DatabaseStorage\BaseDatabaseStorage.cs" />
+    <Compile Include="Storage\DatabaseStorage\IDatabaseStorage.cs" />
+    <Compile Include="Translator\ITranslator.cs" />
+    <Compile Include="UIControls\Button\IButton.cs" />
+    <Compile Include="UIControls\CheckBox\ICheckBox.cs" />
+    <Compile Include="UIControls\DataList\IDataItemView.cs" />
+    <Compile Include="UIControls\DataList\IDataSource.cs" />
+    <Compile Include="UIControls\DataList\ItemClickEventArgs.cs" />
+    <Compile Include="UIControls\Drawer\IDrawerScreen.cs" />
+    <Compile Include="UIControls\IControl.cs" />
+    <Compile Include="UIControls\ImageView\IImageView.cs" />
+    <Compile Include="UIControls\ImageView\IUrlImageView.cs" />
+    <Compile Include="UIControls\InputField\IInputField.cs" />
+    <Compile Include="UIControls\InputField\InputType.cs" />
+    <Compile Include="UIControls\InputField\SearchInputField\ISearchInputField.cs" />
+    <Compile Include="UIControls\InputField\SearchInputField\ISearchResultItem.cs" />
+    <Compile Include="UIControls\InputField\SearchInputField\PerformSearchEventArgs.cs" />
+    <Compile Include="UIControls\InputField\SearchInputField\SearchResultItemClickEventArgs.cs" />
+    <Compile Include="UIControls\IScreen.cs" />
+    <Compile Include="UIControls\Label\ILabel.cs" />
+    <Compile Include="Utils\AsyncRelayCommand\RelayCommand.cs" />
+    <Compile Include="Utils\AsyncRelayCommand\RelayCommandExtensions.cs" />
+    <Compile Include="Utils\DispatcherHelper.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="UIControls\InputField\IMultilineInputField.cs" />
+    <Compile Include="Utils\Extensions\ObservableCollectionEx.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Enums\AnimationType.cs" />
+    <Compile Include="Interfaces\ILoading.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net">
+      <HintPath>..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Net.Async">
+      <HintPath>..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
