@@ -21,8 +21,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <IOSDebuggerPort>26372</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
@@ -37,8 +35,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -54,8 +50,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -74,8 +68,6 @@
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -109,10 +101,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iHere\iHere.csproj">
-      <Project>{71B2F758-B010-424C-BDBA-2C2AF0DB5C52}</Project>
-      <Name>iHere.Shared</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Xamarin.Core.iOS\Xamarin.Core.iOS.csproj">
       <Project>{135BD607-6F70-43B4-9C10-A7617FAEB30B}</Project>
       <Name>Xamarin.Core.iOS</Name>
@@ -120,6 +108,10 @@
     <ProjectReference Include="..\Xamarin.Core\Xamarin.Core.csproj">
       <Project>{22129D1A-E915-4F40-A189-9C0161914DAB}</Project>
       <Name>Xamarin.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iHere\iHere.Shared.csproj">
+      <Project>{71B2F758-B010-424C-BDBA-2C2AF0DB5C52}</Project>
+      <Name>iHere.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +124,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Screens\Dummy\DummyViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -145,6 +138,11 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\NavigationConfig.cs" />
+    <Compile Include="Screens\Dummy\DummyViewController.cs" />
+    <Compile Include="Screens\Dummy\DummyViewController.designer.cs" />
+    <Compile Include="Implementation\iOSApp.cs" />
+    <Compile Include="Implementation\iOSDatabaseStorage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -8,17 +8,17 @@ namespace iHere.Shared.Manager
 {
     public class BaseManager
     {
-        private IHereStorage _repository;
+        private IHereDatabaseStorage _repository;
         private IAppStorage _appStorage;
         private IDialogServiceEx _dialogService;
 
 
 
-        protected IHereStorage Repository
+        protected IHereDatabaseStorage Repository
         {
             get
             {
-                return _repository ?? (_repository = ServiceLocator.Current.GetInstance<IHereStorage>());
+                return _repository ?? (_repository = ServiceLocator.Current.GetInstance<IHereDatabaseStorage>());
             }
         }
 

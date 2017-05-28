@@ -5,7 +5,7 @@
     /// Hold all the screen's key
     /// 
     /// </summary>
-    enum ScreenKey
+    public enum ScreenKey
     {
         Dummy,
 
