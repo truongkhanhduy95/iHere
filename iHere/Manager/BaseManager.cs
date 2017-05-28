@@ -1,6 +1,4 @@
-﻿using System;
-using iHere.Shared.Storage;
-using Microsoft.Practices.ServiceLocation;
+﻿using Microsoft.Practices.ServiceLocation;
 using Xamarin.Core;
 using Xamarin.Core.Interfaces.Views;
 

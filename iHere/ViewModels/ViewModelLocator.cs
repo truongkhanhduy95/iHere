@@ -5,7 +5,7 @@ namespace iHere.Shared.ViewModels
 {
     public class ViewModelLocator
     {
-        public static void RegisterViewModel()
+        public static void RegisterViewModels()
         {
             SimpleIoc.Default.Register<DummyViewModel>();
         }

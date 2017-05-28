@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using SQLite.Net.Interop;
 using Xamarin.Core;
 
-namespace iHere.Shared.Storage
+namespace iHere.Shared
 {
     public abstract class IHereDatabaseStorage : BaseDatabaseStorage
     {

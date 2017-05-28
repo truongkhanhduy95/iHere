@@ -1,6 +1,6 @@
 ﻿using System;
 using GalaSoft.MvvmLight.Ioc;
-using iHere.Shared.Storage;
+using iHere.Shared;
 using iHere.Shared.ViewModels;
 using Xamarin.Core;
 using Xamarin.Core.iOS;
@@ -25,7 +25,7 @@ namespace iHere.iOS
 
         protected override void RegisterIocOnProject()
         {
-            ViewModelLocator.RegisterViewModel();
+            ViewModelLocator.RegisterViewModels();
             SimpleIoc.Default.Register<INavigationConfig,NavigationConfig>();
             SimpleIoc.Default.Register<IHereDatabaseStorage,iOSDatabaseStorage>();
         }

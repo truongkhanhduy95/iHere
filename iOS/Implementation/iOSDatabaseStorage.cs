@@ -1,6 +1,6 @@
 ﻿using System;
 using Foundation;
-using iHere.Shared.Storage;
+using iHere.Shared;
 using SQLite.Net.Interop;
 
 namespace iHere.iOS
