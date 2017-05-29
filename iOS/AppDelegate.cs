@@ -19,14 +19,17 @@ namespace iHere.iOS
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
-            iOSApp.Instance.Initialize(application);
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+			// Override point for customization after application launch.
+			// If not required for your application you can safely delete this method
 
-            var dummyViewController = new DummyViewController();
-            Window.RootViewController = dummyViewController;
-            Window.MakeKeyAndVisible();
+			UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.Default, false);
+
+			iOSApp.Instance.Initialize(application);
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var viewController = new LoginViewController();
+			Window.RootViewController = viewController;
+			Window.MakeKeyAndVisible();
 
 			return true;
 		}

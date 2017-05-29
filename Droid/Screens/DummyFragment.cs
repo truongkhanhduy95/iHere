@@ -16,33 +16,33 @@ using Xamarin.Core.Droid;
 
 namespace iHere.Droid
 {
-    public class DummyFragment : BaseFragment<DummyViewModel>
-    {
-        protected override int LayoutResource => throw new NotImplementedException();
+	public class DummyFragment : BaseFragment<DummyViewModel>
+	{
+		protected override int LayoutResource => Resource.Layout.Main;
 
-        public override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
+		public override void OnCreate(Bundle savedInstanceState)
+		{
+			base.OnCreate(savedInstanceState);
 
-            // Create your fragment here
-        }
+			// Create your fragment here
+		}
 
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			// Use this to return your custom view for this Fragment
+			// return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
-            return base.OnCreateView(inflater, container, savedInstanceState);
-        }
+			return base.OnCreateView(inflater, container, savedInstanceState);
+		}
 
-        protected override void OnCreatedView(LayoutInflater inflater)
-        {
-            
-        }
+		protected override void OnCreatedView(LayoutInflater inflater)
+		{
 
-        protected override void SetBindings()
-        {
-            
-        }
-    }
+		}
+
+		protected override void SetBindings()
+		{
+
+		}
+	}
 }
