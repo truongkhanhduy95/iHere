@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using Microsoft.Practices.ServiceLocation;
 using UIKit;
 
 namespace iHere.iOS
@@ -18,8 +19,14 @@ namespace iHere.iOS
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+            // Override point for customization after application launch.
+            // If not required for your application you can safely delete this method
+            iOSApp.Instance.Initialize(application);
+            Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+            var dummyViewController = new DummyViewController();
+            Window.RootViewController = dummyViewController;
+            Window.MakeKeyAndVisible();
 
 			return true;
 		}

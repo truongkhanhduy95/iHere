@@ -1,26 +1,57 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Core.Droid;
+using iHere.Droid.Implementation;
+using iHere.Shared;
+using Microsoft.Practices.ServiceLocation;
+using Xamarin.Core;
 
 namespace iHere.Droid
 {
-	[Activity(Label = "iHere", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
+	[Activity(Label = "LarvikHK", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/MyTheme")]
+	public class MainActivity : BaseActivity
 	{
-		int count = 1;
+		private static MainActivity _context;
+
+		public static MainActivity Context
+		{
+			get
+			{
+				return MainActivity._context;
+			}
+		}
+
+		//protected override int ActivityLayoutResource
+		//{
+		//  get
+		//  {
+		//      throw new NotImplementedException();
+		//  }
+		//}
+
+		//protected override void BindControls()
+		//{
+		//  throw new NotImplementedException();
+		//}
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+			// Cached instance
+			Instance = this;
+			// Init app
+			DroidApp.Instance.Initialize();
+			var nav = SetupRootNavigator();
+			nav.NavigateTo((int)ScreenKey.Dummy);
+		}
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
-
-			button.Click += delegate { button.Text = $"{count++} clicks!"; };
+		private Navigator SetupRootNavigator()
+		{
+			var nav = ServiceLocator.Current.GetInstance<INavigator>() as Navigator;
+			nav.Initialize(this, FragmentManager, RootView.Id);
+			return nav;
 		}
 	}
 }
