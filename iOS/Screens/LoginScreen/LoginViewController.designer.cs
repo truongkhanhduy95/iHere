@@ -9,26 +9,12 @@ using System.CodeDom.Compiler;
 
 namespace iHere.iOS
 {
-	[Register ("LoginViewController")]
-	partial class LoginViewController
-	{
-		[Outlet]
-		Xamarin.Core.iOS.XamarinButton btnSignUp { get; set; }
-
-		[Outlet]
-		UIKit.UIView viewLogo { get; set; }
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (btnSignUp != null) {
-				btnSignUp.Dispose ();
-				btnSignUp = null;
-			}
-
-			if (viewLogo != null) {
-				viewLogo.Dispose ();
-				viewLogo = null;
-			}
-		}
-	}
+    [Register ("LoginViewController")]
+    partial class LoginViewController
+    {
+        
+        void ReleaseDesignerOutlets ()
+        {
+        }
+    }
 }
