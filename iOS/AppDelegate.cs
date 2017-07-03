@@ -27,7 +27,7 @@ namespace iHere.iOS
 			iOSApp.Instance.Initialize(application);
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			var viewController = new LoginViewController();
+            var viewController = new SearchViewController();
 			Window.RootViewController = viewController;
 			Window.MakeKeyAndVisible();
 

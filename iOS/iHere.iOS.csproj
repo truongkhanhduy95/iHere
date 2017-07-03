@@ -121,12 +121,16 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Screens\LoginScreen\" />
+    <Folder Include="CustomViews\" />
+    <Folder Include="Implementation\UIControls\" />
+    <Folder Include="Screens\SearchScreen\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Screens\Dummy\DummyViewController.xib" />
     <InterfaceDefinition Include="Screens\LoginScreen\LoginViewController.xib" />
+    <InterfaceDefinition Include="Screens\SearchScreen\SearchViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -149,16 +153,27 @@
     <Compile Include="Screens\LoginScreen\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\UIControls\iHereButton.cs" />
+    <Compile Include="Screens\SearchScreen\SearchViewController.cs" />
+    <Compile Include="Screens\SearchScreen\SearchViewController.designer.cs">
+      <DependentUpon>SearchViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Implementation\UIControls\iHereTextField.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\bg_login.jpg" />
+    <BundleResource Include="Resources\bg_search.jpg" />
+    <BundleResource Include="Resources\bg_search.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
         <Policies>
-          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedFlat" ResourceNamePolicy="FileFormatDefault" />
+          <DotNetNamingPolicy ResourceNamePolicy="FileFormatDefault" DirectoryNamespaceAssociation="PrefixedFlat">
+            <inheritsSet />
+            <inheritsScope />
+          </DotNetNamingPolicy>
         </Policies>
       </Properties>
     </MonoDevelop>
