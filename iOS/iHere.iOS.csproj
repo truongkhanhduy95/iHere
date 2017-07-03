@@ -124,6 +124,7 @@
     <Folder Include="CustomViews\" />
     <Folder Include="Implementation\UIControls\" />
     <Folder Include="Screens\SearchScreen\" />
+    <Folder Include="Screens\HotelDetails\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -131,6 +132,7 @@
     <InterfaceDefinition Include="Screens\Dummy\DummyViewController.xib" />
     <InterfaceDefinition Include="Screens\LoginScreen\LoginViewController.xib" />
     <InterfaceDefinition Include="Screens\SearchScreen\SearchViewController.xib" />
+    <InterfaceDefinition Include="Screens\HotelDetails\HotelDetailsViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -159,11 +161,16 @@
       <DependentUpon>SearchViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Implementation\UIControls\iHereTextField.cs" />
+    <Compile Include="Screens\HotelDetails\HotelDetailsViewController.cs" />
+    <Compile Include="Screens\HotelDetails\HotelDetailsViewController.designer.cs">
+      <DependentUpon>HotelDetailsViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\bg_login.jpg" />
     <BundleResource Include="Resources\bg_search.jpg" />
     <BundleResource Include="Resources\bg_search.jpeg" />
+    <BundleResource Include="Resources\bg_hotel.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

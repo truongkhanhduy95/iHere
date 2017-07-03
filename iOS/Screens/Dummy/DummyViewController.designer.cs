@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace iHere.iOS.Dummy
+namespace iHere.iOS
 {
     [Register ("DummyViewController")]
     partial class DummyViewController

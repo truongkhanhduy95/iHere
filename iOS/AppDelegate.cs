@@ -1,4 +1,4 @@
-﻿using Foundation;
+﻿﻿using Foundation;
 using Microsoft.Practices.ServiceLocation;
 using UIKit;
 
@@ -25,7 +25,7 @@ namespace iHere.iOS
 			iOSApp.Instance.Initialize(application);
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            var viewController = new SearchViewController();
+            var viewController = new DummyViewController();
 			Window.RootViewController = viewController;
 			Window.MakeKeyAndVisible();
 
